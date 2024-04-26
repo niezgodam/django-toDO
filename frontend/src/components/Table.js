@@ -41,11 +41,11 @@ const Table = ({ todos, isLoading, setTodos }) => {
         todo.id === editedTodo.id ? response.data : todo
       );
       setTodos(newTodos);
-      setIsEditing(false);
       setEditedTodo({
-        body: "",
-        content: ""
+        content: "",
+        body: ""
       });
+      setIsEditing(false);
     } catch (error) {
       console.log(error);
     }
@@ -67,12 +67,12 @@ const Table = ({ todos, isLoading, setTodos }) => {
   };
 
   const handleEdit = (todoItem) => {
-    setIsEditing(true);
     setEditedTodo({
       ...todoItem,
       body: todoItem.body,
       content: todoItem.content
     });
+    setIsEditing(true);
   };
 
   return (
@@ -110,7 +110,7 @@ const Table = ({ todos, isLoading, setTodos }) => {
             />
             <div>
               <div
-                className="bg-[#00df98] rounded-lg btn btn-primary p-2 font-bold mx-auto max-w-[400px] mb-4 mt-4 cursor-pointer"
+                className="bg-[#00df98] rounded-lg btn btn-primary p-2 font-bold mx-auto max-w-[400px] mb-4 mt-4 cursor-pointer active:bg-[#02a873]"
                 onClick={() => {
                   handleContent();
                 }}
@@ -167,7 +167,6 @@ const Table = ({ todos, isLoading, setTodos }) => {
             setIsDetail(true);
             setEditedTodo({
               ...todoItem,
-              body: todoItem.body,
               content: todoItem.content
             });
           }}
@@ -223,7 +222,6 @@ const Table = ({ todos, isLoading, setTodos }) => {
             setIsDetail(true);
             setEditedTodo({
               ...todoItem,
-              body: todoItem.body,
               content: todoItem.content
             });
           }}
