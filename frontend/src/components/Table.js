@@ -70,6 +70,7 @@ const Table = ({ todos, isLoading, setTodos }) => {
     setIsEditing(true);
     setEditedTodo({
       ...todoItem,
+      body: todoItem.body,
       content: todoItem.content
     });
   };
@@ -166,6 +167,7 @@ const Table = ({ todos, isLoading, setTodos }) => {
             setIsDetail(true);
             setEditedTodo({
               ...todoItem,
+              body: todoItem.body,
               content: todoItem.content
             });
           }}
@@ -221,6 +223,7 @@ const Table = ({ todos, isLoading, setTodos }) => {
             setIsDetail(true);
             setEditedTodo({
               ...todoItem,
+              body: todoItem.body,
               content: todoItem.content
             });
           }}
