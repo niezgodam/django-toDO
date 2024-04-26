@@ -98,13 +98,13 @@ const Table = ({ todos, isLoading, setTodos }) => {
           <div className="justify-center text-center bg-zinc-800/100  max-w-[800px] mx-auto rounded-2xl border absolute left-0 right-0">
             <h1 className="text-[#00df98] font-bold">Title</h1>
             <textarea
-              className="min-w-[400px] min-h-[100px] mt-4 outline-none rounded-xl p-1 px-2"
+              className="min-w-[400px] min-h-[100px] mt-4 outline-none rounded-xl p-1 px-2 resize-none"
               value={editedTodo.body}
               onChange={(e) => setEditedTodo({...editedTodo, body: e.target.value})}
             />
             <h1 className="text-[#00df98] font-bold">Description</h1>
             <textarea
-              className="min-w-[400px] min-h-[100px] mt-4 outline-none rounded-xl p-1 px-2"
+              className="min-w-[400px] min-h-[100px] mt-4 outline-none rounded-xl p-1 px-2 resize-none"
               value={editedTodo.content}
               onChange={(e) => setEditedTodo({...editedTodo, content: e.target.value})}
             />
